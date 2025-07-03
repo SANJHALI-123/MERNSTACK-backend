@@ -3,6 +3,7 @@ import { Reservation } from "../models/reservationSchema.js";
 
 
 export const sendReservation = async (req, res, next) => {
+  console.log("Received form submission:", req.body);
   
   const { firstName, lastName, email, date, time, phone } = req.body;
   if (!firstName || !lastName || !email || !date || !time || !phone) {
